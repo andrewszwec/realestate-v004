@@ -1,0 +1,19 @@
+512,256,128,epoch=200,lr=0.001, drop=0.5, relu, batch=256 | 0.18213
+512,256,128,epoch=200,lr=0.001, drop=0.8, relu, batch=256 | 0.2
+512,256,128,epoch=200,lr=0.01, drop=0.5, relu, batch=256 | 0.18628
+1024,512,128,epoch=200,lr=0.002, drop=0.5, relu, batch=256 | 0.17054
+1024,512,128,epoch=200,lr=0.002, drop=0.5, relu, batch=256, no train/test split | 0.18
+1024,512,128,epoch=200,lr=0.002, drop=0.5, relu, batch=256, no train/test split, with trunc_norm initialiser, batch_norming  | 7.5
+
+1024,512,128,epoch=100,lr=0.002, drop=0.5, relu, batch=256, no train/test split, with trunc_norm initialiser, no batch_norming  | 0.17614
+
+1024,512,128,epoch=100,lr=0.002, drop=0.5, relu, batch=256, no train/test split, with trunc_norm initialiser, no batch_norming, log(saleprice)   | 0.32380
+
+
+
+
+
+
+## BATCH NORM CNN FUNC
+def Conv2DReluBatchNorm(n_filter, w_filter, h_filter, inputs):
+    return BatchNormalization()(Activation(activation='relu')(Convolution2D(n_filter, w_filter, h_filter, border_mode='same')(inputs)))
