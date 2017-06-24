@@ -9,6 +9,16 @@
 
 1024,512,128,epoch=100,lr=0.002, drop=0.5, relu, batch=256, no train/test split, with trunc_norm initialiser, no batch_norming, log(saleprice)   | 0.32380
 
+1024,512,128,epoch=100,lr=0.002, drop=0.5, relu, batch=256, no train/test split, with trunc_norm initialiser, no batch_norming, log(saleprice), binary encoding categoricals   | 1.24
+
+256,256,128,epoch=100,lr=0.01, drop=0.5, relu, batch=256, no train/test split, with trunc_norm initialiser, no batch_norming, log(saleprice), binary encoding categoricals   |  0.31112
+
+
+
+
+
+
+
 
 
 
